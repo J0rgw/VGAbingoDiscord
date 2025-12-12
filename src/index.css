@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #16213e 100%);
+  min-height: 100vh;
+}
+
+.bingo-cell {
+  @apply aspect-square flex items-center justify-center text-center p-1 text-xs sm:text-sm border border-purple-500/30 rounded transition-all cursor-pointer hover:border-purple-400;
+}
+
+.bingo-cell.marked {
+  @apply bg-green-600/50 border-green-400;
+}
+
+.bingo-cell.free {
+  @apply bg-amber-500/30 border-amber-400;
+}
